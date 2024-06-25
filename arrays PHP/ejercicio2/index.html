@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+</head>
+<body>
+    <script>
+        // tabla del 5
+        let matriz5 = [];
+        let pares5 = [];
+        let impares5 = [];
+        let num3 = 1;
+        let matrixX5=[]
+        let sumasPares5
+        let sumasImpares5
+       
+
+        for (let num1 = 0; num1 < 5; num1++) {
+            matriz5[num1] = [];//fila
+            for (let num2 = 0; num2 < 5; num2++) {
+                matriz5[num1][num2] = num3 * 5;//columna
+                num3++;
+                if(matriz5[num1][num2]%2 ==0){
+                    pares5.push(matriz5[num1][num2]) 
+                }else{
+                    impares5.push(matriz5[num1][num2])
+                }
+                //matrix X en 5
+                if(num1===num2 || num1+num2===4){
+                    matrixX5 += matriz5[num1][num2] + "\t";
+                }else{
+                    matrixX5 += " \t";
+                }
+
+               sumasPares5 = 0;
+               for (let iteracion = 0; iteracion < pares5.length; iteracion++) {
+               sumasPares5 += pares5[iteracion];
+
+               sumasImpares5 = 0;
+               for(let iteracion2 = 0; iteracion2 < impares5.length; iteracion2++){
+                sumasImpares5 +=  impares5[iteracion2];
+               }
+        }
+            }
+            matrixX5 += "\n";
+        }
+        console.log("Matriz 5: ", matriz5);
+        console.log("Pares de la tabla del 5: "+ pares5);
+        console.log("Impares de la tabla del 5: "+ impares5);
+        console.log("La suma total de los pares de la tabla del 5 es "+sumasPares5);
+        console.log("La suma total de los impares de la tabla del 5 es "+sumasImpares5);
+        console.log("Matriz generada en X con la tabla del 5: ");
+        console.log(matrixX5)
+      
+       // console.log(matriz5[0][1]) izquierda:fila, derecha:columna
+    
+        //tabla del 9
+        let matriz9=[]
+        let pares9=[]
+        let impares9=[]
+        let matrixX9=[]
+        let multiplicador=1
+        let sumasPares9
+        let sumasImpares9
+
+        for(let num1=0; num1<5;num1++){
+            matriz9[num1]=[]; //fila
+            for(let num2=0; num2<5; num2++){
+                matriz9[num1][num2] = multiplicador * 9;//columna
+                multiplicador++;
+                if(matriz9[num1][num2]%2 == 0){
+                    pares9.push(matriz9[num1][num2]) 
+                }else{
+                    impares9.push(matriz9[num1][num2])
+                }
+                //matrix X en 9
+                if(num1===num2 || num1+num2===4){
+                    matrixX9 += matriz9[num1][num2] + "\t";
+                }else{
+                    matrixX9 += " \t";
+                } 
+                sumasPares9 = 0;
+                for(let i=0; i<pares9.length;i++){
+                    sumasPares9+=pares9[i]
+                }
+                sumasImpares9 = 0;
+                for(let i=0; i<impares9.length;i++){
+                    sumasImpares9+=impares9[i]
+                }
+            }
+            matrixX9 += "\n";
+        }
+        console.log("Matriz 9:", matriz9);
+        console.log("Pares de la tabla del 9:"+ pares9);
+        console.log("Impares de la tabla del 9:"+ impares9);
+        console.log("La suma total de los pares de la tabla del 9 es "+sumasPares9);
+        console.log("La suma total de los impares de la tabla del 9 es "+sumasImpares9);
+        console.log("Matriz generada en X con la tabla del 9:");
+        console.log(matrixX9)
+
+  
+
+
+
+    </script>
+    
+</body>
+</html>

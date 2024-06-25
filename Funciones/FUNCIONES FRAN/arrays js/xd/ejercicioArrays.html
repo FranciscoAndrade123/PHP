@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xd</title>
+</head>
+<body>
+    <script>
+        //genereme una matriz pentadimensional con las tablas del 1 y 5, generando una N , sacar los numeros pares y 
+        //sumarlos
+        let matriz1=[]
+        let matriz1N=[]
+        let pares1=[]
+        let pares=0
+        let impares1=[]
+        let impares=0
+        let multiplicador=0
+
+        for(let fila=0; fila<5;fila++){
+            matriz1[fila]=[]
+            for(let columna=0;columna<5;columna++){
+                matriz1[fila][columna] = multiplicador * 1; 
+                multiplicador++;
+                //la conndicional de  si es par o impar
+                if(matriz1[fila][columna]%2==0){
+                pares1.push(matriz1[fila][columna])
+            }else{
+                impares1.push(matriz1[fila][columna])
+            }
+            if(columna + fila ==fila || columna===fila || columna === 4 || (fila % 2 === 0 && columna === 0) ){
+                matriz1N+=matriz1[fila][columna] + "\t";
+            }else{
+                matriz1N+=  " \t";
+            }
+
+            }
+            matriz1N+= "\n";
+           
+        }
+
+        console.log(matriz1)
+        console.log(pares1)
+        console.log(impares1)
+        console.log(matriz1N)
+        
+    </script>
+    
+</body>
+</html>

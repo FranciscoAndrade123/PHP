@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+    <script>
+        let numeros = [];
+        let pares = [];
+        let impares = [];
+
+        for (let longitud = 1; longitud <= 10; longitud++) {
+            numeros.push(longitud) // Agregar el número al array 'numeros'
+
+            if (longitud % 2 === 0) {
+                pares.push(longitud); // Agregar el número par al array 'pares'
+            } else {
+                impares.push(longitud); // Agregar el número impar al array 'impares'
+            }
+        }
+
+        console.log("Los números del 1 al 10: " + numeros);
+        console.log("Números pares: " + pares);
+        console.log("Números impares: " + impares);
+    </script>
+</body>
+</html>

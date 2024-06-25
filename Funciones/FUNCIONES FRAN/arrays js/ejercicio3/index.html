@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz en forma de X</title>
+</head>
+<body>
+    <script>
+
+        // matrix
+        let matriz5 = [];
+   
+        for (let fila = 0; fila < 5; fila++) {
+            matriz5[fila] = []; 
+            for (let columna = 0; columna < 5; columna++) {
+                let numero = Math.floor(Math.random() * 100) + 1;
+                matriz5[fila][columna] = numero;
+            }
+        }  
+        console.log("Matriz generada:");
+        console.log(matriz5);
+
+        // Matriz en forma de X
+        let matrixX = ""; 
+
+        for (let filaX = 0; filaX < 5; filaX++) {
+            for (let columnaX = 0; columnaX < 5; columnaX++) {
+                if (filaX === columnaX || filaX + columnaX === 4) {
+                    matrixX += matriz5[filaX][columnaX] + "\t"; // Añadir el número de la matriz original
+                } else {
+                    matrixX += " \t"; // Agregar un espacio en blanco en las posiciones fuera de la diagonal
+                }
+            }
+            matrixX += "\n"; // Agregar un salto de línea al final de cada fila
+        }
+
+        console.log("Matriz en forma de X:");
+        console.log(matrixX);
+   
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+<?php
+$holamundo="hola mundo";
+?>
